@@ -1,0 +1,368 @@
+1.
+
+int
+float
+int
+String
+float
+int
+float
+float
+double
+int
+int
+
+2.
+A Value Type holds the data within its own memory allocation and a Reference 
+Type contains a pointer to another memory location that holds the real data. 
+Reference Type variables are stored in the heap while Value Type variables are 
+stored in the stack.
+
+Basically, Boxing converts a Value Type variable into a Reference Type variable, 
+and Unboxing achieves the vice-versa. Boxing and Unboxing enable a unified view 
+of the type system in which a value of any type can be treated as an object.
+
+3.
+using System.Collections.Generic;
+using System;
+
+public class HelloWorld
+{
+   
+    public static void Main(string[] args)
+    {
+        
+        
+        double pow_ab = Math.Pow(2, sizeof(byte) * 8);
+        Console.WriteLine(pow_ab);
+        pow_ab = Math.Pow(2, sizeof(short) * 8) / 2;
+        Console.WriteLine(pow_ab);
+        pow_ab = Math.Pow(2, sizeof(ushort) * 8);
+        Console.WriteLine(pow_ab);
+        pow_ab = Math.Pow(2, sizeof(int) * 8) / 2;
+        Console.WriteLine(pow_ab);
+        pow_ab = Math.Pow(2, sizeof(uint) * 8);
+        Console.WriteLine(pow_ab);
+        pow_ab = Math.Pow(2, sizeof(long) * 8) / 2;
+        Console.WriteLine(pow_ab);
+        pow_ab = Math.Pow(2, sizeof(ulong) * 8);
+        Console.WriteLine(pow_ab);
+        pow_ab = Math.Pow(2, sizeof(float) * 8) / 2;
+        Console.WriteLine(pow_ab);
+        pow_ab = Math.Pow(2, sizeof(double) * 8);
+        Console.WriteLine(pow_ab);
+        pow_ab = Math.Pow(2, sizeof(decimal) * 8);
+        Console.WriteLine(pow_ab);
+
+    }
+}
+
+4.
+manages the allocation and release of memory for your application
+
+
+5.
+
+1.1 
+
+2.1
+
+using System;
+ 
+public class Test
+{
+    public static void Main(string[] args)
+    {
+        string x = Console.ReadLine();
+        double y = Int64.Parse(x);
+        double a = y * 100 * 365 * 24 * 60 * 60;
+        Console.Write(
+            y + " centuries = " + y * 100 + " years = " +
+            y * 100 * 365 + " days = " +
+            y * 100 * 365 * 24 + " hours = " +
+            y * 100 * 365 * 24 * 60);
+        Console.Write( " minutes = " + a.ToString());
+        a = a * 100d;
+        Console.Write( " seconds " + a.ToString());
+        a = a * 100d;
+        Console.Write( " milliseconds " + a.ToString());
+        a = a * 100d;
+        Console.Write( " microseconds " + a.ToString());
+        Console.Write( " nanoseconds " );
+        Console.WriteLine();
+ 
+ 
+       
+ 
+    }
+}
+ 
+
+
+3.Cannot implicitly convert type 'uint' to 'int'
+
+4.y++ assign y to x then add 1 to y
+++y add 1 to y then assign y to x
+
+5.break will break loop
+continue will go to next iteration
+return will leave the loop
+
+6.
+1.init
+2.end
+3.increment
+
+7.
+= is assign
+== is compare
+
+8.
+Keep running?
+
+9.
+default
+
+10.
+
+
+
+1.
+using System;
+ 
+public class Test
+{
+    public static void Main(string[] args)
+    {
+        string a = Console.ReadLine();
+ 
+        biz(Int16.Parse(a));
+    }
+ 
+    public static void biz(int num) {
+        if (num % 15 == 0)
+            Console.WriteLine("fizzbuzz");
+        else if (num % 5 == 0)
+            Console.WriteLine("buzz");
+        else if (num % 3 == 0)
+            Console.WriteLine("fizz");
+        else
+            Console.WriteLine("meme");
+    }
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.
+using System;
+ 
+public class Test
+{
+    public static void Main(string[] args)
+    {
+        string a = Console.ReadLine();
+        int head = 1;
+        int layer = Int16.Parse(a);
+        int row = 1 + 2 * layer;
+ 
+        while(head <= layer + 1){
+ 
+            int temp_emp = row - head;
+            while(temp_emp > 0) {
+                Console.Write(" ");
+                temp_emp = temp_emp - 1;
+            }
+       
+            temp_emp = head * 2 - 1;
+            while(temp_emp > 0) {
+                Console.Write("*");
+                temp_emp = temp_emp - 1;
+            }
+            Console.WriteLine();
+            head = head + 1;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+3.
+using System;
+ 
+public class Test
+{
+    public static void Main(string[] args)
+    {
+        int guessedNumber = int.Parse(Console.ReadLine());
+        Random rnd = new Random();
+        int num  = rnd.Next(1, 4);
+ 
+        if (num > guessedNumber)
+            Console.WriteLine("low");
+        else if (num < guessedNumber)
+            Console.WriteLine("high");
+        else
+            Console.WriteLine("right");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4.
+using System;
+ 
+public class Test
+{
+    public static void Main(string[] args)
+    {
+        string num = Console.ReadLine();
+     
+        string month = num.Substring(0, 2);
+        string day = num.Substring(2, 2);
+        string year = num.Substring(4, 4);
+ 
+        int i_m = int.Parse(month);
+        int i_d = int.Parse(day);
+        int i_y = int.Parse(year);
+ 
+        i_d = i_d + i_m * 30 + i_y * 365;
+ 
+        Console.WriteLine(i_d);
+    }
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6.
+using System;
+ 
+public class Test
+{
+    public static void Main(string[] args)
+    {
+     
+        for (int i = 0; i <= 24; i++) {
+            Console.Write(i + " ");
+        }
+        Console.WriteLine();
+        for (int i = 0; i <= 24; i = i + 2) {
+            Console.Write(i + " ");
+        }
+        Console.WriteLine();
+        for (int i = 0; i <= 24; i = i + 3) {
+            Console.Write(i + " ");
+        }
+        Console.WriteLine();
+        for (int i = 0; i <= 24; i = i + 4) {
+            Console.Write(i + " ");
+        }
+        Console.WriteLine();
+    }
+}
+ 
+
